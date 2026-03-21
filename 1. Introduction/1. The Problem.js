@@ -12,23 +12,25 @@
 
 const studentsDatabase = ["jordan", "erick", "john", "michel"];
 
-// 1. method
+//! 1. method
 
 // const studentName = "john";
 
 // console.log(studentName);
 
-// 2. basic loop
+//! 2. basic loop
 
-const findStudents = (students, name) => {
-  for (let i = 0; i < students.length; i++) {
-    if (students[i] === name) {
-      return `found ${name}`;
-    }
-  }
+// const findStudents = (students, name) => {
+//   for (let i = 0; i < students.length; i++) {
+//     if (students[i] === name) {
+//       return `found ${name}`;
+//     }
+//   }
 
-  return `not found ${name}`;
-};
+//   return `not found ${name}`;
+// };
+
+//! 3.includes()
 
 // const findStudents = (allStd, stdName) => {
 //   if (!stdName) return null;
@@ -36,6 +38,23 @@ const findStudents = (students, name) => {
 //   return stdFound ? `Found ${stdName}` : `Not found ${stdName}`;
 // };
 
-const results = findStudents(studentsDatabase, "john");
+//! 4 find()
+
+// const findStd = (students, name) => {
+//   const student = students.find((std) => std === name);
+//   return student ? `Found ${name}` : `Not found ${name}`;
+// };
+
+//! 5. findIndex()
+
+const stdName = (std, name) => {
+  const studeent = std.findIndex((std) => std === name);
+
+  return studeent != -1
+    ? `found ${name} \n at index ${studeent}`
+    : `not found ${name}`;
+};
+
+const results = stdName(studentsDatabase, "john");
 
 console.log(results);
