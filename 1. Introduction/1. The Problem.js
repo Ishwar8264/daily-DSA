@@ -47,14 +47,30 @@ const studentsDatabase = ["jordan", "erick", "john", "michel"];
 
 //! 5. findIndex()
 
-const stdName = (std, name) => {
-  const studeent = std.findIndex((std) => std === name);
+// const stdName = (std, name) => {
+//   const studeent = std.findIndex((std) => std === name);
 
-  return studeent != -1
-    ? `found ${name} \n at index ${studeent}`
-    : `not found ${name}`;
-};
+//   return studeent != -1
+//     ? `found ${name} \n at index ${studeent}`
+//     : `not found ${name}`;
+// };
 
-const results = stdName(studentsDatabase, "john");
+//! 6. some()
+
+// const findSome = (std, name) => {
+//   const stds = std.some((std) => std === name);
+
+//   return stds ? ` found ${name}` : `not found ${name}`;
+// };
+
+//! 7. filter()
+
+// const findFilter = (stds, name) => {
+//   const stdss = stds.filter((std) => std === name);
+
+//   return stdss.length ? ` found ${name}` : `not found ${name}`;
+// };
+
+const results = findFilter(studentsDatabase, "Ishwr");
 
 console.log(results);
